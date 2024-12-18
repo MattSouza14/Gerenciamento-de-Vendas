@@ -1,19 +1,20 @@
 package org.example.models;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Order {
     private String nomeCliente;
     private String telefoneCliente;
     private String nomeProduto;
     private Double valorProduto;
-    private Boolean temDesconto;
+    private Boolean temDesconto = false;
     private Double quantidadeDesconto = 0.0;
-    private Boolean temParcelamento;
+    private Boolean temParcelamento= false;
     private Integer quantidadeParcelas = 1;
     private Boolean pago = false;
-    private LocalDate dataPedido;
-    private LocalDate dataPagamento;
+    private Date dataPedido;
+    private Date dataPagamento;
     private Double valorParcela = 0.0;
 
     public Order(String nomeProduto, Double valorProduto, Boolean pago, String nomeCliente, String telefoneCliente) {
@@ -109,19 +110,19 @@ public class Order {
         this.temParcelamento = temParcelamento;
     }
 
-    public LocalDate getDataPagamento() {
+    public Date getDataPagamento() {
         return dataPagamento;
     }
 
-    public void setDataPagamento(LocalDate dataPagamento) {
+    public void setDataPagamento(Date dataPagamento) {
         this.dataPagamento = dataPagamento;
     }
 
-    public LocalDate getDataPedido() {
+    public Date getDataPedido() {
         return dataPedido;
     }
 
-    public void setDataPedido(LocalDate dataPedido) {
+    public void setDataPedido(Date dataPedido) {
         this.dataPedido = dataPedido;
     }
 
